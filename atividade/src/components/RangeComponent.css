@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  gap: 40px;
+}
+
+.container div {
+  display: flex;
+}
+
+.boxAzul {
+  padding: 20px;
+  background: aqua;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
