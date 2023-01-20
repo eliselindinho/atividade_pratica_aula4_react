@@ -4,6 +4,7 @@ import "./RangeComponent.css";
 function RangeComponent() {
   const [valorLeft, setValorLeft] = useState(0);
   const [valorRight, setValorRight] = useState(0);
+
   function diminuiValorLeft() {
     setValorLeft(valorLeft - 1);
   }
@@ -34,7 +35,19 @@ function RangeComponent() {
 
   useEffect(() => {
     return () => console.log("Aqui é quando o componente será desmontado!");
-  }, []);
+  }, [valorLeft < 0]);
+
+  useEffect(() => {
+    return () => console.log("Aqui é quando o componente será desmontado!");
+  }, [valorLeft > 10]);
+
+  useEffect(() => {
+    return () => console.log("Aqui é quando o componente será desmontado!");
+  }, [valorRight < 0]);
+
+  useEffect(() => {
+    return () => console.log("Aqui é quando o componente será desmontado!");
+  }, [valorRight > 10]);
 
   return (
     <div className="container">
